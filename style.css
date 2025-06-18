@@ -1,0 +1,208 @@
+/* Color Palette */
+:root {
+    --primary-dark: #00408C;
+    --primary-light: #96ADD6;  /* light dusty blue */
+    --accent-soft: #F9B8AF;    /* soft peach/pink */
+    --accent-bold: #E85234;    /* bold red/peach */
+    --background-light: #F2EEE9;
+    --background-soft: #F2D7D3;
+}
+
+/* Base Styles */
+body {
+    background-color: var(--background-light);
+    color: var(--primary-dark);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Override Bootstrap Primary Color */
+.bg-primary {
+    background-color: var(--primary-dark) !important;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-dark) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--accent-soft);
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: var(--accent-soft) !important;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: white;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--accent-bold);
+    border-color: var(--accent-bold);
+    color: white;
+}
+
+.btn-outline-primary {
+    color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+/* New Accent Button */
+.btn-accent {
+    background-color: var(--accent-bold);
+    border-color: var(--accent-bold);
+    color: white;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+    background-color: var(--accent-soft);
+    border-color: var(--accent-soft);
+    color: var(--primary-dark);
+}
+
+/* Category Buttons - now red with white text to match buy/sell buttons */
+.btn-category {
+    background-color: var(--accent-bold);
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-category:hover {
+    background-color: #c84324; /* slightly darker red on hover */
+    color: white;
+}
+
+/* Hero Section background color */
+.hero-section {
+    background-color: var(--primary-light);
+    padding: 4rem 0;
+    text-align: center;
+    color: var(--primary-dark);
+}
+
+/* Cards */
+.card {
+    border: 1px solid var(--accent-bold);
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); 
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent-bold); 
+    background-color: var(--background-soft);
+}
+
+.card-title {
+    color: var(--primary-dark);
+}
+
+.card-text {
+    color: #333;
+}
+
+/* Category Cards Red Background + White Text for Women's, Men's, Accessories */
+.category-card-red {
+    background-color: var(--accent-bold) !important;
+    color: white !important;
+    border-color: var(--accent-bold) !important;
+}
+
+.category-card-red .card-title,
+.category-card-red .card-text {
+    color: white !important;
+}
+
+/* Alerts */
+.alert-success {
+    background-color: var(--accent-soft);
+    border: none;
+    color: var(--primary-dark);
+}
+
+.alert-info {
+    background-color: var(--background-soft);
+    border: none;
+    color: var(--primary-dark);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-dark);
+    color: white;
+    font-size: 0.9rem;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+footer a {
+    color: var(--accent-soft);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--accent-bold);
+    text-decoration: underline;
+}
+
+/* Form Controls */
+.form-control:focus {
+    border-color: var(--accent-bold);
+    box-shadow: 0 0 0 0.25rem rgba(232, 82, 53, 0.25);
+}
+
+/* Links */
+a {
+    color: var(--primary-dark);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--accent-bold);
+    text-decoration: underline;
+}
+
+/* Badge Accent */
+.badge-accent {
+    background-color: var(--accent-bold);
+    color: white;
+}
